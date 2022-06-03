@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include "Numero.hpp"
 using namespace std;
 int main(){
     cout << "----------Bienvenido----------\n";
@@ -15,7 +17,8 @@ int main(){
 		}
 			  break;
 		case 1: {
-
+			string numero;
+			cout << "Ingrese Numero:"; cin >> numero;
 		}
 			  break;
 		case 2: {
