@@ -3,9 +3,15 @@
 using namespace std;
     Numero::Numero() {}
     Numero::Numero(string num) {
-        this->enetero = num;
+        this->numer = num;
     }
-    virtual int operator -(numero num2);
-    virtual int operator +(numero num2);
-    virtual int operator *(numero num2);
+     int Numero:: operator - (Numero num) {
+     
+     }
+     int Numero:: operator + (Numero num) {
+     
+     }
+     int Numero:: operator * (Numero num) {
+     
+     }
     
