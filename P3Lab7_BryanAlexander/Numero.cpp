@@ -3,10 +3,17 @@
 #include "Numero.hpp"
 using namespace std;
     Numero::Numero() {}
-    Numero::Numero(string num) {
-        this->enetero = num;
+    Numero::Numero(string num,char car) {
+        this->numer = num;
+        this->tipo = car;
     }
-     int Numero::operator -(numero num2);
-     int Numero::operator +(numero num2);
-     int Numero::operator *(numero num2);
+    int Numero::operator -(Numero num2) {
+        return 0;
+    }
+    int Numero::operator +(Numero num2) {
+        return 0;
+    }
+    int Numero::operator *(Numero num2) {
+        return 0;
+    }
     

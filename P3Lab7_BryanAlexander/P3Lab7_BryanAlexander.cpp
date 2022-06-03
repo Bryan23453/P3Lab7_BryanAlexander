@@ -1,12 +1,13 @@
 #include <iostream>
 #include <string>
 #include "Numero.hpp"
+#include "Numero.cpp"
 #include "Hexadecimal.hpp"
 #include "Binario.hpp"
 #include "Octal.hpp"
 #include <vector>
 using namespace std;
-vector <Numero> num;
+vector <Numero*> num;
 int main(){
     cout << "----------Bienvenido----------\n";
 	int opcion=1;
@@ -19,6 +20,7 @@ int main(){
 		switch (opcion) {
 		case 0: {
 			cout << "Feliz Dia!";
+			cout << string::npos;
 		}
 			  break;
 		case 1: {
@@ -26,18 +28,24 @@ int main(){
 			cout << "Ingrese Numero:"; cin >> numero;
 			if (numero.find("b") != string::npos) {
 				if ((int)numero[numero.size()-1]==98) {
-					num.push_back( Numero(numero));
+					num.push_back(new Numero(numero, 98));
+				}else {
+					cout << "Numero No Cuenta Con Ningun formato"<<endl;
 				}
 			}else{
 				if (numero.find("x") != string::npos){
-					cout << "hola2";
 					if ((int)numero[0] == 48 && (int)numero[1] == 120) {
-						//num.push_back(new Numero(numero));
+						num.push_back(new Numero(numero, 120));
+					}
+					else {
+						cout << "Numero No Cuenta Con Ningun formato" << endl;
 					}
 				}else{
 					if (numero.find("c") != string::npos) {
 						if ((int)numero[0] == 48 && (int)numero[1] == 99) {
-							//num.push_back(new Numero(numero));
+							num.push_back(new Numero(numero, 99));
+						}else {
+							cout << "Numero No Cuenta Con Ningun formato" << endl;
 						}
 					}
 				}
@@ -47,13 +55,21 @@ int main(){
 		case 2: {
 			cout << "---------------------Numeros----------------------" << endl;
 			for (size_t i = 0; i < num.size(); i++) {
-				//cout << "Numero #" <<i << num[i] << endl;
+				cout << "Numero #" <<i << num[i]->numer << endl;
 			}
 			cout << "--------------------------------------------------" << endl;
 		}
 			  break;
 		case 3: {
 			int ope;
+			for (size_t i = 0; i < num.size(); i++) {
+				cout << "Numero #" << i << endl;
+				cout<< num[i]->numer << endl;
+			}
+			int primer, secun;
+			cout << "Ingrese el primer numero" << endl; cin >> primer;
+			cout << "Ingrese el segundo numero" << endl; cin >> secun;
+			cout << "--------------------------------------------------" << endl;
 			cout << "1. Sumar" << endl;
 			cout << "2. Restar" << endl;
 			cout << "3. Multiplicar" << endl;
