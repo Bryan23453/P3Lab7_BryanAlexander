@@ -1,11 +1,12 @@
 #include <iostream>
+#include <string>
 #include "Numero.hpp"
 using namespace std;
     Numero::Numero() {}
     Numero::Numero(string num) {
         this->enetero = num;
     }
-    virtual int operator Numero::-(numero num2);
-    virtual int operator Numero::+(numero num2);
-    virtual int operator Numero::*(numero num2);
+     int Numero::operator -(numero num2);
+     int Numero::operator +(numero num2);
+     int Numero::operator *(numero num2);
     

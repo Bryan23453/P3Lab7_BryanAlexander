@@ -6,7 +6,7 @@
 #include "Octal.hpp"
 #include <vector>
 using namespace std;
-vector <Numero*> num;
+vector <Numero> num;
 int main(){
     cout << "----------Bienvenido----------\n";
 	int opcion=1;
@@ -24,23 +24,20 @@ int main(){
 		case 1: {
 			string numero;
 			cout << "Ingrese Numero:"; cin >> numero;
-			string bin("b");
-			string hexa("x");
-			string octa("v");
-			if (numero.find(bin) != string::npos) {
+			if (numero.find("b") != string::npos) {
 				if ((int)numero[numero.size()-1]==98) {
-					num.push_back(new Numero(numero));
+					num.push_back( Numero(numero));
 				}
 			}else{
-				if (numero.find(hexa) != string::npos){
+				if (numero.find("x") != string::npos){
 					cout << "hola2";
 					if ((int)numero[0] == 48 && (int)numero[1] == 120) {
-						num.push_back(new Numero(numero));
+						//num.push_back(new Numero(numero));
 					}
 				}else{
-					if (numero.find(octa) != string::npos) {
+					if (numero.find("c") != string::npos) {
 						if ((int)numero[0] == 48 && (int)numero[1] == 99) {
-							num.push_back(new Numero(numero));
+							//num.push_back(new Numero(numero));
 						}
 					}
 				}
@@ -50,7 +47,7 @@ int main(){
 		case 2: {
 			cout << "---------------------Numeros----------------------" << endl;
 			for (size_t i = 0; i < num.size(); i++) {
-				cout << num[i] << endl;
+				//cout << "Numero #" <<i << num[i] << endl;
 			}
 			cout << "--------------------------------------------------" << endl;
 		}
@@ -65,15 +62,15 @@ int main(){
 			case 1: {
 
 			}
-				   break;
+			break;
 			case 2: {
 
 			}
-				  break;
+			break;
 			case 3: {
 
 			}
-				  break;
+			break;
 			default:{
 			
 			}
