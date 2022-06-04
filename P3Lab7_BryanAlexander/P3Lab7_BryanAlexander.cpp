@@ -70,37 +70,43 @@ int main(){
 		}
 			  break;
 		case 3: {
-			int ope;
-			for (size_t i = 0; i < num.size(); i++) {
-				cout << "Numero #" << i << endl;
-				cout<< num[i]->numer << endl;
+			if (num.size()>0){
+				int ope;
+				for (size_t i = 0; i < num.size(); i++) {
+					cout << "Numero #" << i << endl;
+					cout << num[i]->numer << endl;
+				}
+				int primer, secun;
+				cout << "Ingrese el primer numero" << endl; cin >> primer;
+				cout << "Ingrese el segundo numero" << endl; cin >> secun;
+				cout << "--------------------------------------------------" << endl;
+				cout << "1. Sumar" << endl;
+				cout << "2. Restar" << endl;
+				cout << "3. Multiplicar" << endl;
+				cout << "Ingrese Opcion: "; cin >> ope;
+				switch (ope) {
+				case 1: {
+					cout << "Total: " << num[primer]->operator+(*num[secun]) << endl;
+				}
+					  break;
+				case 2: {
+					cout << "Total: " << num[primer]->operator-(*num[secun]) << endl;
+				}
+					  break;
+				case 3: {
+					cout << "Total: " << num[primer]->operator*(*num[secun]) << endl;
+				}
+					  break;
+				default: {
+					cout << "opcion invalida" << endl;
+				}
+					   break;
+				}
 			}
-			int primer, secun;
-			cout << "Ingrese el primer numero" << endl; cin >> primer;
-			cout << "Ingrese el segundo numero" << endl; cin >> secun;
-			cout << "--------------------------------------------------" << endl;
-			cout << "1. Sumar" << endl;
-			cout << "2. Restar" << endl;
-			cout << "3. Multiplicar" << endl;
-			cout << "Ingrese Opcion: "; cin >> ope;
-			switch (ope){
-			case 1: {
-				cout << "Total: " << num[primer]->operator+(*num[secun])<<endl;
+			else{
+				cout << "no hay numero para sumar calcular o restar" << endl;
 			}
-			break;
-			case 2: {
-				cout << "Total: "<<num[primer]->operator-(*num[secun]) << endl;
-			}
-			break;
-			case 3: {
-				cout << "Total: "<<num[primer]->operator*(*num[secun]) << endl;
-			}
-			break;
-			default:{
-				cout << "opcion invalida" << endl;
-			}
-			break;
-			}
+			
 		}
 			  break;
 		default: {

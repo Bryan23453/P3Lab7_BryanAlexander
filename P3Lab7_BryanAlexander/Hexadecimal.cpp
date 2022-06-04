@@ -12,7 +12,5 @@ using namespace std;
         convertir(numarregl);
     }
     void Hexadecimal::convertir(string num) {
-        cout << " hexa " << num << endl;
         entero=stoi(num, 0, 16);
-        cout <<"numero hexa a deci" << entero << endl;
     }

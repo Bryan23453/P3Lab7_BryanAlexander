@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Numero.hpp"
+#include <sstream>
 using namespace std;
     Numero::Numero() {}
     Numero::Numero(string num,char car) {
@@ -36,7 +37,16 @@ using namespace std;
             
         }
         else if (tipo==120) {
-        
+            try{
+                int resultado = entero - num2.entero;
+                cout.unsetf(ios::dec);
+                cout.setf(ios::hex | ios::showbase);
+                return resultado;
+            }
+            catch (...){
+                cout << "La Resta Es Menor O Igual A 0 " << endl;
+                return 0;
+            }
         }
         
     }
@@ -53,15 +63,26 @@ using namespace std;
                 }
                 resultado /= 2;
             }
-            string f (r.rbegin(), r.rend());
+            string f;
+            for (size_t i = r.length(); i > 0 ; i--) {
+                    f += r[i];
+            }
+            f += r[0];
             r = f;
-            return stoi(r);
+            stringstream ss;
+            int num;
+            ss << r;
+            ss >> num;
+            return num;
         }
         else if (tipo == 99) {
 
         }
         else if (tipo == 120) {
-
+            int resultado = entero + num2.entero;
+            cout.unsetf(ios::dec);
+            cout.setf(ios::hex | ios::showbase);
+            return resultado;
         }
     }
     int Numero::operator *(Numero num2) {
@@ -85,7 +106,10 @@ using namespace std;
 
         }
         else if (tipo == 120) {
-
+            int resultado = entero * num2.entero;
+            cout.unsetf(ios::dec);
+            cout.setf(ios::hex | ios::showbase);
+            return resultado;
         }
     }
     
