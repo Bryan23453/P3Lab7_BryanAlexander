@@ -12,5 +12,5 @@ using namespace std;
         convertir(numarregl);
     }
     void Hexadecimal::convertir(string num) {
-        entero=stoi(num, 0, 16);
+        this->entero=stoi(num, 0, 16);
     }
