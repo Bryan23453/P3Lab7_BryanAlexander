@@ -19,6 +19,6 @@ using namespace std;
            numeroresp += a * pow(8, cont);
             ++cont;
         }
-        this->entero =numeroresp;
+        this->entero = numeroresp;
     }
     
