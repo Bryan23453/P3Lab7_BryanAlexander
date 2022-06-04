@@ -8,6 +8,7 @@ using namespace std;
         this->tipo = car;
     }
     int Numero::operator -(Numero num2) {
+        
         return 0;
     }
     int Numero::operator +(Numero num2) {

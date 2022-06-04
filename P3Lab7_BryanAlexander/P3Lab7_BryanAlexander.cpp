@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include "Numero.hpp"
-#include "Numero.cpp"
 #include "Hexadecimal.hpp"
 #include "Binario.hpp"
 #include "Octal.hpp"
@@ -29,6 +28,7 @@ int main(){
 			if (numero.find("b") != string::npos) {
 				if ((int)numero[numero.size()-1]==98) {
 					num.push_back(new Numero(numero, 98));
+					cout << "Numero Decimal Agregado Exitosamente " <<(char)98 << endl;
 				}else {
 					cout << "Numero No Cuenta Con Ningun formato"<<endl;
 				}
@@ -36,6 +36,7 @@ int main(){
 				if (numero.find("x") != string::npos){
 					if ((int)numero[0] == 48 && (int)numero[1] == 120) {
 						num.push_back(new Numero(numero, 120));
+						cout << "Numero Hexadecimal Agregado Exitosamente " << (char)120 << endl;
 					}
 					else {
 						cout << "Numero No Cuenta Con Ningun formato" << endl;
@@ -44,6 +45,8 @@ int main(){
 					if (numero.find("c") != string::npos) {
 						if ((int)numero[0] == 48 && (int)numero[1] == 99) {
 							num.push_back(new Numero(numero, 99));
+							cout << "Numero Octal Agregado Exitosamente " << (char)99 << endl;
+
 						}else {
 							cout << "Numero No Cuenta Con Ningun formato" << endl;
 						}

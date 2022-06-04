@@ -1,11 +1,10 @@
 #include <iostream>
+#include <string>
 #include "Binario.hpp"
 using namespace std;
-public:
     Binario::Binario() {}
-    Binario::Binario(string numero) {
-        this->num=numerto;
+    Binario::Binario(string numero, char car)  {
+        this->num= numero;
     }
     void Binario::convertir(string num) {
-        return 0;
     }
