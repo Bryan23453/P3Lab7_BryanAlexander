@@ -90,8 +90,7 @@ using namespace std;
             cout.setf(ios::oct);
             return resultado;
         }
-        else if (tipo == 120) {
-            cout << "valor de entero en octa " << entero << endl;
+        if (tipo == 120) {
             int resultado = entero + num2.entero;
             cout.unsetf(ios::dec);
             cout.setf(ios::hex | ios::showbase);
