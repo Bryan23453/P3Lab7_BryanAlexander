@@ -9,7 +9,7 @@ protected:
     string num;
 public:
     Hexadecimal();
-    Hexadecimal(string numero);
+    Hexadecimal(string numero,char car);
     void convertir(string num);
 };
 #endif 

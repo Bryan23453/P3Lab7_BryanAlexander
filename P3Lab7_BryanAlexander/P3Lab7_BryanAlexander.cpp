@@ -34,14 +34,14 @@ int main(){
 			if (numero.find("b") != string::npos) {
 				if ((int)numero[numero.size()-1]==98) {
 					num.push_back(new Binario(numero, 98));
-					cout << "Numero Decimal Agregado Exitosamente " <<(char)98 << endl;
+					cout << "Numero Binario Agregado Exitosamente " <<(char)98 << endl;
 				}else {
 					cout << "Numero No Cuenta Con Ningun formato"<<endl;
 				}
 			}else{
 				if (numero.find("x") != string::npos){
 					if ((int)numero[0] == 48 && (int)numero[1] == 120) {
-						num.push_back(new Numero(numero, 120));
+						num.push_back(new Hexadecimal(numero, 120));
 						cout << "Numero Hexadecimal Agregado Exitosamente " << (char)120 << endl;
 					}
 					else {
@@ -89,22 +89,22 @@ int main(){
 			}
 			break;
 			case 2: {
-				num[primer]->operator-(*num[secun]);
+				cout << "Total: "<<num[primer]->operator-(*num[secun]) << endl;
 			}
 			break;
 			case 3: {
-				num[primer]->operator*(*num[secun]);
+				cout << "Total: "<<num[primer]->operator*(*num[secun]) << endl;
 			}
 			break;
 			default:{
-			
+				cout << "opcion invalida" << endl;
 			}
 			break;
 			}
 		}
 			  break;
 		default: {
-
+			cout << "opcion invalida"<<endl;
 		}
 			   break;
 		}

@@ -13,7 +13,7 @@ using namespace std;
             int resultado=entero - num2.entero;
             string r;
             while (resultado != 0) {
-                if (resultado % 2 == 0){
+                if (resultado % 2 == 0) {
                     r += "0";
                 }
                 else {
@@ -21,7 +21,22 @@ using namespace std;
                 }
                 resultado /= 2;
             }
-            return stoi(r);
+            try{
+                string f(r.rbegin(), r.rend());
+                r = f;
+                return stoi(r);
+            }
+            catch (...){
+                cout << "La Resta Es Menor O Igual A 0 " << endl;
+                return 0;
+            }
+            
+        }
+        else if(tipo == 99) {
+            
+        }
+        else if (tipo==120) {
+        
         }
         
     }
@@ -29,7 +44,6 @@ using namespace std;
         if (tipo == 98) {
             int resultado = entero + num2.entero;
             string r;
-            cout << "holaaa";
             while (resultado != 0) {
                 if (resultado % 2 == 0) {
                     r += "0";
@@ -42,6 +56,12 @@ using namespace std;
             string f (r.rbegin(), r.rend());
             r = f;
             return stoi(r);
+        }
+        else if (tipo == 99) {
+
+        }
+        else if (tipo == 120) {
+
         }
     }
     int Numero::operator *(Numero num2) {
@@ -57,7 +77,15 @@ using namespace std;
                 }
                 resultado /= 2;
             }
+            string f(r.rbegin(), r.rend());
+            r = f;
             return stoi(r);
+        }
+        else if (tipo == 99) {
+
+        }
+        else if (tipo == 120) {
+
         }
     }
     

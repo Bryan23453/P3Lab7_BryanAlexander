@@ -12,5 +12,6 @@ using namespace std;
             convertir(numarregl);
     }
     void Binario::convertir(string num) {
-		this->entero = std::stoi(num, nullptr, 2);
+            this->entero = std::stoi(num, nullptr, 2);
+		
     }
