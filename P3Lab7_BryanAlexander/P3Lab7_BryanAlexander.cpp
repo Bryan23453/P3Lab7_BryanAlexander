@@ -25,7 +25,6 @@ int main(){
 		switch (opcion) {
 		case 0: {
 			cout << "Feliz Dia!";
-			cout << string::npos;
 		}
 			  break;
 		case 1: {
@@ -78,10 +77,11 @@ int main(){
 		case 3: {
 			if (num.size()>0){
 				int ope;
+				cout << "---------------------Numeros----------------------" << endl;
 				for (size_t i = 0; i < num.size(); i++) {
-					cout << "Numero #" << i << endl;
-					cout << num[i]->numer << endl;
+					cout << "Numero #" << i << " " << num[i]->numer << endl;
 				}
+				cout << "--------------------------------------------------" << endl;
 				int primer, secun;
 				cout << "Ingrese el primer numero" << endl; cin >> primer;
 				cout << "Ingrese el segundo numero" << endl; cin >> secun;
@@ -92,7 +92,10 @@ int main(){
 				cout << "Ingrese Opcion: "; cin >> ope;
 				switch (ope) {
 				case 1: {
-					cout << "Total: " << num[primer]->operator+(*num[secun]) << endl;
+					if (num[primer]->operator+(*num[secun])!=0){
+						cout << "Total: " << num[primer]->operator+(*num[secun]) << endl;
+					}
+					
 				}
 					  break;
 				case 2: {

@@ -78,11 +78,15 @@ using namespace std;
             }
             f += r[0];
             r = f;
-            stringstream ss;
-            int num;
-            ss << r;
-            ss >> num;
-            return num;
+            try{
+               return stoi(r);
+            }
+            catch (...)
+            {
+                cout << "Total: " << r<<endl;
+                return 0;
+            }
+            
         }
         else if (tipo == 99) {
             int resultado = entero + num2.entero;
