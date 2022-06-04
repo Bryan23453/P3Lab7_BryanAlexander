@@ -5,8 +5,14 @@
 #include "Binario.hpp"
 #include "Octal.hpp"
 #include <vector>
+#include <math.h>
+#include<conio.h>
 using namespace std;
 vector <Numero*> num;
+int binar_decima(string num) {
+	
+	return 0;
+}
 int main(){
     cout << "----------Bienvenido----------\n";
 	int opcion=1;
@@ -27,7 +33,7 @@ int main(){
 			cout << "Ingrese Numero:"; cin >> numero;
 			if (numero.find("b") != string::npos) {
 				if ((int)numero[numero.size()-1]==98) {
-					num.push_back(new Numero(numero, 98));
+					num.push_back(new Binario(numero, 98));
 					cout << "Numero Decimal Agregado Exitosamente " <<(char)98 << endl;
 				}else {
 					cout << "Numero No Cuenta Con Ningun formato"<<endl;
@@ -58,7 +64,7 @@ int main(){
 		case 2: {
 			cout << "---------------------Numeros----------------------" << endl;
 			for (size_t i = 0; i < num.size(); i++) {
-				cout << "Numero #" <<i << num[i]->numer << endl;
+				cout << "Numero #" <<i <<" " << num[i]->numer << endl;
 			}
 			cout << "--------------------------------------------------" << endl;
 		}
@@ -79,15 +85,15 @@ int main(){
 			cout << "Ingrese Opcion: "; cin >> ope;
 			switch (ope){
 			case 1: {
-
+				cout << "Total: " << num[primer]->operator+(*num[secun])<<endl;
 			}
 			break;
 			case 2: {
-
+				num[primer]->operator-(*num[secun]);
 			}
 			break;
 			case 3: {
-
+				num[primer]->operator*(*num[secun]);
 			}
 			break;
 			default:{
@@ -105,4 +111,3 @@ int main(){
 	}
 	
 }
-
