@@ -6,10 +6,12 @@
 using namespace std;
 
 class Octal : public Numero {
+protected:
+    string num;
 public:
     string entero;
     Octal();
-    Octal(string numero);
+    Octal(string numero,char car);
     void convertir(string num);
 };
 #endif 

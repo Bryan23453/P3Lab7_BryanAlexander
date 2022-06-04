@@ -34,7 +34,16 @@ using namespace std;
             
         }
         else if(tipo == 99) {
-            
+            try {
+                int resultado = entero - num2.entero;
+                cout.unsetf(ios::hex);
+                cout.setf(ios::oct);
+                return resultado;
+            }
+            catch (...) {
+                cout << "La Resta Es Menor O Igual A 0 " << endl;
+                return 0;
+            }
         }
         else if (tipo==120) {
             try{
@@ -76,9 +85,13 @@ using namespace std;
             return num;
         }
         else if (tipo == 99) {
-
+            int resultado = entero + num2.entero;
+            cout.unsetf(ios::hex);
+            cout.setf(ios::oct);
+            return resultado;
         }
         else if (tipo == 120) {
+            cout << "valor de entero en octa " << entero << endl;
             int resultado = entero + num2.entero;
             cout.unsetf(ios::dec);
             cout.setf(ios::hex | ios::showbase);
@@ -103,7 +116,11 @@ using namespace std;
             return stoi(r);
         }
         else if (tipo == 99) {
-
+            int resultado = entero * num2.entero;
+            cout.unsetf(ios::hex);
+            cout.setf(ios::oct);
+            return resultado;
+            
         }
         else if (tipo == 120) {
             int resultado = entero * num2.entero;

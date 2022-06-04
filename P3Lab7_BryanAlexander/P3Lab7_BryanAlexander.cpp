@@ -50,7 +50,7 @@ int main(){
 				}else{
 					if (numero.find("c") != string::npos) {
 						if ((int)numero[0] == 48 && (int)numero[1] == 99) {
-							num.push_back(new Numero(numero, 99));
+							num.push_back(new Octal(numero, 99));
 							cout << "Numero Octal Agregado Exitosamente " << (char)99 << endl;
 
 						}else {
@@ -62,11 +62,17 @@ int main(){
 		}
 			  break;
 		case 2: {
-			cout << "---------------------Numeros----------------------" << endl;
-			for (size_t i = 0; i < num.size(); i++) {
-				cout << "Numero #" <<i <<" " << num[i]->numer << endl;
+			if (num.size()>0){
+				cout << "---------------------Numeros----------------------" << endl;
+				for (size_t i = 0; i < num.size(); i++) {
+					cout << "Numero #" << i << " " << num[i]->numer << endl;
+				}
+				cout << "--------------------------------------------------" << endl;
 			}
-			cout << "--------------------------------------------------" << endl;
+			else{
+				cout << "No Hay Numeros Para Mostrar"<<endl;
+			}
+			
 		}
 			  break;
 		case 3: {
